@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: url("img/tree.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background:rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+    border-right: none;
+    transition:  .5s ease-out;
+    box-shadow: 2px 2px 40px black;
+    transition: .8s ease;
+}
+
+.sidebar:hover {
+    width: 260px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    padding: 25px 10px 15px;
+}
+
+
+.logo img {
+    width: 43px;
+    border-radius: 50%;
+}
+
+.logo h2 {
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-left: 15px;
+    display: none;
+}
+
+.sidebar:hover .logo h2 {
+    display: block;
+    font-size: 1.5rem;
+
+}
+
+.sidebar .links {
+    height: calc(100% - 140px);
+    overflow-y: auto;
+    scrollbar-width: none;
+    list-style: none;
+    margin-top: 20px;
+
+}
+
+.sidebar .links h3 {
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: none;
+
+}
+
+.sidebar:hover .links h3{
+     display: block;
+}
+
+.links li {
+    display: flex;
+    align-items: center;
+    font-size: 1.15rem;
+    margin-top: 20px;
+}
+
+.links li:hover {
+    border-radius: 4px;
+    cursor: pointer;
+    background: #f7f1f1;
+}
+
+.links hr {
+    border-color: #4c4c4c;
+    margin: 10px 8px;
+}
+
+.sidebar:hover .links hr {
+    border-color: transparent;
+}
+
+.links li span {
+    padding: 12px 10px;
+}
+
+.links li a {
+    color: #000;
+    padding: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+   display: none;
+}
+
+
+.sidebar:hover .links li a{
+    display: block;
+
+}
